@@ -7,6 +7,7 @@ before_install:
 
 deploy:
   skip_cleanup: true
+  
   provider: releases
   api_key:
     secure: ZL/DWMWe8UGqtHxAoUDR0xzX7Rt8+6qeRBh/kSM2WqjQhZjBBbA5ll5yRonlSZKkAGqYM/0LskgzlUQxvfp91wy0oP/95V6NPhRAgF28jj0aPmq6MEOS/lqc4S8mhNihA1CBBhfgpXznHtSDfNoAmIVqJ90lr5vpM5WD1Gc944SN8mQGyviQIHK5q8El6FLHwJ5L8bztRhGkgTlRX2mnd0ycCeNAtesvcKmZnTJ07L2n/O1Byo3+srq6CeNd/zv+SHSNAGIvobXDOaA60ySdnyZPIsrY4hQ82fJxJK3PnRzFlJkB9h9uq7gn3n3dlRwI6oiX/BqiOftOP09nOIrP8hPAF/+kvGG+ROpjOq28Oyj9gkP5oh1NxU+KuGw6WFTqcws6vf1BkiHVRVUXf6fBUHbcuYQjcGxqq3Y5YmrqlNAvDL2qAfO0euzQoD9+o7yEB4iv15QKc5tFUctkp+TH/8EbP1NVy1UEFTus4I4T9kT0HYe98nFmypsTBDG1jwBIwHZGfrLF3pmFYEOqk4tVUXBDXebtEBhHfinGC8vgue+N11c1zyNtgbz0jih9Uumsf4uQ70S6FQ+qNlIdrJIWVqLvcRZ44WKlYGSmnYYa+bvSw8M9rbBgn6hJsB0YJg6yVDRqCfpHTr28n/JpwOcY/s3j3TAFwJmSnCfLbcr/Gjo=
@@ -14,3 +15,10 @@ deploy:
   file: "build/libs/*.jar"
   on:
     tags: true
+  
+  provider: bintray
+  file: "Path to a descriptor file, containing information for the Bintray upload"
+  user: "pmig.caleia@gmail.com"
+  key:
+    secure: JuVzAzlbKAGRIA3WPFK/JvYSaK/B6KGFBfEAHrGoGPxWUB6+dgC+ycLD4IvjndDHlY6GvMWVmBL1nIoUVrxGjtKL1acUnQYzTp7OvtbrXxqWlcKy4JLfUMf0YWgQ6qMqj7FgTP8307NE1eV2IZRiw0mCkInm6Qk0ZApBysVNi7qpFc3cWFB9+KG89+0y3fwjwQtwg5O/FyrYy1IKkV48wlqaAMdhvQIs+VhGC6Dj5tCEKhuMmZ5ObMFAdYzrjsV9MssWpgnA1YKCiiZuymg+UEzcvj2YK6hwk/MFf+Bp7HM83Qj+6yykwWNVjTeRaWJ/WkjfQD3zy8Hkf+OuaFI+mahcWUbwKDOVhrQDNaKQSClPw8PUg2V1N6rm1RFHynz1FDOC6nHVT7ZvwmHUyeVIMQePzIURaNW9i5259/ltIBjFBAyVjgaZx2wfIRVUxG3vAXTVmrbu6JRnEOSnxQmhPFSUl4ILkaGEtkDoIiMWOoU+G8PPN718wVZu4uMmQfpWyepXw10h4muGX7NILdsd7odxGq0WmotyzzcMb2bC3aynI1o0SwaCIlJ60Zq+GWvz9R2bmDukWgavK+wZYSp0T4ypDFbpqx+RhrESaVpOPYDhjBTPLzuO/OqmdtJPV4L8BIZNnWbQ+dcDAh9gm6Wm6697siahpXmtsPznpAoYsfI=
+  dry-run: true
