@@ -8,7 +8,8 @@ before_install:
 deploy:
   skip_cleanup: true
   provider: releases
-  api_key: cfddfba810b51ee219372338816cd834e783b23f
+  api_key:
+    secure: ZL/DWMWe8UGqtHxAoUDR0xzX7Rt8+6qeRBh/kSM2WqjQhZjBBbA5ll5yRonlSZKkAGqYM/0LskgzlUQxvfp91wy0oP/95V6NPhRAgF28jj0aPmq6MEOS/lqc4S8mhNihA1CBBhfgpXznHtSDfNoAmIVqJ90lr5vpM5WD1Gc944SN8mQGyviQIHK5q8El6FLHwJ5L8bztRhGkgTlRX2mnd0ycCeNAtesvcKmZnTJ07L2n/O1Byo3+srq6CeNd/zv+SHSNAGIvobXDOaA60ySdnyZPIsrY4hQ82fJxJK3PnRzFlJkB9h9uq7gn3n3dlRwI6oiX/BqiOftOP09nOIrP8hPAF/+kvGG+ROpjOq28Oyj9gkP5oh1NxU+KuGw6WFTqcws6vf1BkiHVRVUXf6fBUHbcuYQjcGxqq3Y5YmrqlNAvDL2qAfO0euzQoD9+o7yEB4iv15QKc5tFUctkp+TH/8EbP1NVy1UEFTus4I4T9kT0HYe98nFmypsTBDG1jwBIwHZGfrLF3pmFYEOqk4tVUXBDXebtEBhHfinGC8vgue+N11c1zyNtgbz0jih9Uumsf4uQ70S6FQ+qNlIdrJIWVqLvcRZ44WKlYGSmnYYa+bvSw8M9rbBgn6hJsB0YJg6yVDRqCfpHTr28n/JpwOcY/s3j3TAFwJmSnCfLbcr/Gjo=
   file: "travis-ci-prototype.jar"
   on:
     tags: true
