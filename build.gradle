@@ -31,3 +31,21 @@ wrapper {
 test {
 	useJUnitPlatform();
 }
+
+
+task sourcesJar( type: Jar, dependsOn: classes ) {
+	from sourceSets.main.allJava;
+	classifier "sources";
+}
+
+
+task javadocJar( type: Jar, dependsOn: javadoc ) {
+	from javadoc;
+	classifier = 'javadoc';
+}
+
+
+artifacts {
+	archives sourcesJar;
+	archives javadocJar;
+}
