@@ -2,6 +2,9 @@ language: java
 
 jdk: oraclejdk10
 
+before_install:
+ - chmod +x gradlew
+
 deploy:
   skip_cleanup: true
   provider: releases
