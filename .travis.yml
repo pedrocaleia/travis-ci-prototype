@@ -8,7 +8,7 @@ before_install:
 deploy:
   skip_cleanup: true
   provider: releases
-  api_key: $GITHUB_API_KEY
+  api_key: cfddfba810b51ee219372338816cd834e783b23f
   file: "travis-ci-prototype.jar"
   on:
     tags: true
