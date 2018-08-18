@@ -20,7 +20,6 @@ cache:
     - $HOME/.gradle/wrapper/
     
 before_deploy:
-  - mv maven-metadata.xml build/libs/
   - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' build/libs/pom.xml
 
 deploy:
