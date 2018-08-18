@@ -4,6 +4,9 @@ jdk: oraclejdk10
 
 before_install:
   - chmod +x gradlew
+  
+before_deploy:
+  - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' gradle.properties
 
 deploy:
   - provider: releases
