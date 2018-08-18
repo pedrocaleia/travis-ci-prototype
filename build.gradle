@@ -5,7 +5,6 @@ plugins {
 
 apply plugin: "wrapper"
 apply plugin: "java-library"
-apply plugin: "maven"
 apply plugin: "maven-publish"
 
 
@@ -58,35 +57,20 @@ artifacts {
 }
 
 
-task createPom {
-	pom {
-		project {
-			groupId "pt.pcaleia"
-			artifactId "travis-ci-prototype"
-			version "{VERSION}"
-		}
-	}.writeTo( "build/libs/pom.xml" );
-}
-assemble.dependsOn createPom
-
-
 bintray {
-	//user = System.getenv( "BINTRAY_USER" );
-	//key = System.getenv( "BINTRAY_KEY" );
-	
-	user = "pedrocaleia";
-	key = "7b1d4b31194894a2a2f6ac00a75fd4b6fb64ec00";
+	user = System.getenv( "BINTRAY_USER" );
+	key = System.getenv( "BINTRAY_KEY" );
 	
 	pkg {
 		repo = "maven";
 		name = "travis-ci-prototype";
 		
 		version {
-			name = "1.3.2";
+			name = System.getenv( "TRAVIS_TAG" );
 	    }
     }
     
-    publications = [ "MyPublication" ];
+    publications = [ "BintrayPublication" ];
     
     publish = true;
 }
@@ -94,15 +78,15 @@ bintray {
 
 publishing {
 	publications {
-		MyPublication( MavenPublication ) {
-			from components.java
+		BintrayPublication( MavenPublication ) {
+			from components.java;
 			
-			groupId = "pt.pcaleia"
-			artifactId = "travis-ci-prototype"
-			version = "1.3.2"
+			groupId = "pt.pcaleia";
+			artifactId = "travis-ci-prototype";
+			version = System.getenv( "TRAVIS_TAG" );
 			
-			artifact sourcesJar
-          artifact javadocJar
+			artifact sourcesJar;
+			artifact javadocJar;
 		}
 	}
 }
