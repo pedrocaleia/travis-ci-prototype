@@ -61,6 +61,9 @@ bintray {
 	user = System.getenv( "BINTRAY_USER" );
 	key = System.getenv( "BINTRAY_KEY" );
 	
+	System.out.println( "User: " + user );
+	System.out.println( "Key: " + key );
+	
 	pkg {
 		repo = "maven";
 		name = "travis-ci-prototype";
