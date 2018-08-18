@@ -28,3 +28,8 @@ deploy:
     file: "build/libs/*.jar"
     on:
       tags: true
+      
+  - provider: script
+    script: echo "asdasdasd"
+    on:
+      tags: true
