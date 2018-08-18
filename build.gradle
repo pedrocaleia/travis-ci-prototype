@@ -6,7 +6,7 @@ plugins {
 apply plugin: "wrapper"
 apply plugin: "java-library"
 apply plugin: "maven"
-//apply plugin: "maven-publish"
+apply plugin: "maven-publish"
 
 
 sourceCompatibility = 10
@@ -82,7 +82,7 @@ bintray {
 		name = "travis-ci-prototype";
 		
 		version {
-			name = "1.3.1";
+			name = "1.3.2";
 	    }
     }
     
@@ -92,17 +92,17 @@ bintray {
 }
 
 
-//publishing {
-//	publications {
-//		MyPublication( MavenPublication ) {
-//			from components.java
-//			
-//			groupId = "pt.pcaleia"
-//			artifactId = "travis-ci-prototype"
-//			version = "1.3.1"
-//			
-//			artifact sourcesJar
-//          artifact javadocJar
-//		}
-//	}
-//}
+publishing {
+	publications {
+		MyPublication( MavenPublication ) {
+			from components.java
+			
+			groupId = "pt.pcaleia"
+			artifactId = "travis-ci-prototype"
+			version = "1.3.2"
+			
+			artifact sourcesJar
+          artifact javadocJar
+		}
+	}
+}
