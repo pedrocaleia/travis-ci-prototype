@@ -15,12 +15,11 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
-    
-before_deploy:
-  - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' build/libs/pom.xml
-  - mkdir build/libs/pt
 
 deploy:
+  - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' build/libs/pom.xml
+  - mkdir build/libs/pt
+  
   - provider: releases
     skip_cleanup: true
     api_key:
