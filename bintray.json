@@ -33,7 +33,7 @@
 	"files": [
 		{
 			"includePattern": "build/libs/(.*)",
-			"uploadPattern": "pt/pcaleia/travis-ci-prototype/{VERSION}/$1"
+			"uploadPattern": "/$1"
 		}
 	],
 	

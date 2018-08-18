@@ -21,6 +21,12 @@ cache:
     
 before_deploy:
   - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' build/libs/pom.xml
+  - mkdir build/libs/pt
+  - mkdir build/libs/pt/pcaleia
+  - mkdir build/libs/pt/pcaleia/"$TRAVIS_TAG"
+  - mv build/libs/*.jar build/libs/pt/pcaleia/"$TRAVIS_TAG"/
+  - mv build/libs/pom.xml build/libs/pt/pcaleia/"$TRAVIS_TAG"/
+  
 
 deploy:
   - provider: releases
