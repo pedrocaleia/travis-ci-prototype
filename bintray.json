@@ -2,7 +2,7 @@
 	"package": {
 		"name": "travis-ci-prototype",
 		"repo": "maven",
-		"subject": "pedrocaleia", // Bintray subject (user or organization)
+		"subject": "pedrocaleia"
 	},
 
     /* Package version information.
