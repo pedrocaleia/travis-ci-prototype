@@ -32,7 +32,7 @@
 
 	"files": [
 		{
-			"includePattern": [ "build/libs/(.*.jar)", "build/libs/pom.xml" ],
+			"includePattern": "build/libs/(.*)",
 			"uploadPattern": "/$1"
 		}
 	],
