@@ -38,12 +38,8 @@
 		{
 			"includePattern": "build/libs/pom.xml",
 			"uploadPattern": "pt/pcaleia/travis-ci-prototype/{VERSION}/pom.xml"
-		},
-		{
-			"includePattern": "maven-metadata.xml",
-			"uploadPattern": "pt/pcaleia/travis-ci-prototype/maven-metadata.xml"
 		}
 	],
 	
-	"publish": true
+	"publish": false
 }
