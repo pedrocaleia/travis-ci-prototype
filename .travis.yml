@@ -30,6 +30,6 @@ deploy:
       tags: true
       
   - provider: script
-    script: echo "asdasdasd"
+    script: ./gradlew bintrayUpload
     on:
       tags: true
