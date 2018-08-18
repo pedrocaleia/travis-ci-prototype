@@ -4,9 +4,12 @@ jdk: oraclejdk10
 
 before_install:
   - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' gradle.properties
-  - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' pom.xml
   - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' bintray.json
   - chmod +x gradlew
+  
+install:
+  - ./gradlew assemble
+  - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' build/libs/pom.xml
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
