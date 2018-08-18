@@ -66,7 +66,7 @@ bintray {
 		name = "travis-ci-prototype";
 		
 		version {
-			name = "1.4.1";
+			name = "1.4.2";
 	    }
     }
     
@@ -83,7 +83,7 @@ publishing {
 			
 			groupId = "pt.pcaleia";
 			artifactId = "travis-ci-prototype";
-			version = "1.4.1";
+			version = "1.4.2";
 			
 			artifact sourcesJar;
 			artifact javadocJar;

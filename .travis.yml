@@ -30,6 +30,7 @@ deploy:
       tags: true
       
   - provider: script
+    skip_cleanup: true
     script: ./gradlew bintrayUpload
     on:
       tags: true
