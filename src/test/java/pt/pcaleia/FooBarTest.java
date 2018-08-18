@@ -15,7 +15,7 @@ public final class FooBarTest {
 	public void testMultiply() {
 		FooBar fooBar = new FooBar( 10, 20 );
 		
-		Assertions.assertEquals( 200, fooBar.multiply() );
+		Assertions.assertEquals( 201, fooBar.multiply() );
 	}
 
 }
