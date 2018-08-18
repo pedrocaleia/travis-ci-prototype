@@ -4,6 +4,7 @@ jdk: oraclejdk10
 
 before_install:
   - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' gradle.properties
+  - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' pom.xml
   - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' bintray.json
   - chmod +x gradlew
 

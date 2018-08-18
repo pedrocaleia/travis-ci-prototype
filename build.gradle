@@ -1,5 +1,6 @@
 apply plugin: "wrapper"
 apply plugin: "java-library"
+apply plugin: "maven"
 
 
 sourceCompatibility = 10
@@ -41,7 +42,7 @@ task sourcesJar( type: Jar, dependsOn: classes ) {
 
 task javadocJar( type: Jar, dependsOn: javadoc ) {
 	from javadoc;
-	classifier = 'javadoc';
+	classifier = "javadoc";
 }
 
 
@@ -49,3 +50,15 @@ artifacts {
 	archives sourcesJar;
 	archives javadocJar;
 }
+
+
+task createPom {
+	pom {
+		project {
+			groupId "pt.pcaleia"
+			artifactId "travis-ci-prototype"
+			version "{VERSION}"
+		}
+	}.writeTo( "build/libs/pom.xml" );
+}
+assemble.dependsOn createPom
