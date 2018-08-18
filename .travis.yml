@@ -13,6 +13,9 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+    
+after_failure:
+  - echo $TRAVIS_TEST_RESULT
 
 deploy:
   - provider: releases
