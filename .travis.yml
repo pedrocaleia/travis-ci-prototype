@@ -3,12 +3,8 @@ language: java
 jdk: oraclejdk10
 
 before_install:
-  - chmod +x gradlew
-  
-before_deploy:
-  - env
-  - echo $TRAVIS_TAG
   - sed -i 's/{VERSION}/'"$TRAVIS_TAG"'/g' gradle.properties
+  - chmod +x gradlew
 
 deploy:
   - provider: releases
