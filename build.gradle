@@ -58,15 +58,15 @@ artifacts {
 
 
 bintray {
-	user = "pedrocaleia";
-	key = "7b1d4b31194894a2a2f6ac00a75fd4b6fb64ec00";
+	user = System.getenv( "BINTRAY_USER" );
+	key = System.getenv( "BINTRAY_KEY" );
 	
 	pkg {
 		repo = "maven";
 		name = "travis-ci-prototype";
 		
 		version {
-			name = "1.4.2";
+			name = System.getenv( "TRAVIS_TAG" );
 	    }
     }
     
@@ -83,7 +83,7 @@ publishing {
 			
 			groupId = "pt.pcaleia";
 			artifactId = "travis-ci-prototype";
-			version = "1.4.2";
+			version = System.getenv( "TRAVIS_TAG" );
 			
 			artifact sourcesJar;
 			artifact javadocJar;
