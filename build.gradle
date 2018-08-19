@@ -56,6 +56,11 @@ jacocoTestReport {
 }
 
 
+coveralls {
+	jacocoReportPath = "$buildDir/reports/jacoco/xml/jacoco_test_report.xml";
+}
+
+
 task sourcesJar( type: Jar, dependsOn: classes ) {
 	from sourceSets.main.allJava;
 	classifier "sources";
