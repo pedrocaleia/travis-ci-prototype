@@ -4,7 +4,6 @@ jdk: oraclejdk10
 
 before_install:
   - chmod +x gradlew
-  - sed -i 's/{COVERALLS_REPO_TOKEN}/'"$COVERALLS_REPO_TOKEN"'/g' .coveralls.yml
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
