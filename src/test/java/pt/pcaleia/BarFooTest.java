@@ -15,7 +15,7 @@ public final class BarFooTest {
 	public void testMultiply() {
 		BarFoo barFoo = new BarFoo( 10, 20 );
 		
-		Assertions.assertEquals( 201, barFoo.multiply() );
+		Assertions.assertEquals( 200, barFoo.multiply() );
 	}
 
 }
