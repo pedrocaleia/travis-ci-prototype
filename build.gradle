@@ -1,10 +1,12 @@
 plugins {
-	id "com.jfrog.bintray" version "1.8.4"
+	id "com.jfrog.bintray"			version "1.8.4"
+	id "com.github.kt3k.coveralls" 	version "2.8.2"
 }
 
 
 apply plugin: "wrapper"
 apply plugin: "java-library"
+apply plugin: "jacoco"
 apply plugin: "maven-publish"
 
 
@@ -36,6 +38,21 @@ wrapper {
 
 test {
 	useJUnitPlatform();
+}
+
+
+jacoco {
+	toolVersion = "0.8.1";
+}
+
+
+jacocoTestReport {
+	reports {
+		xml.enabled = true;
+		xml.destination = file( "$buildDir/reports/jacoco/xml/jacoco_test_report.xml" );
+		html.enabled = true;
+		html.destination = file( "$buildDir/reports/jacoco/html" );
+	}
 }
 
 

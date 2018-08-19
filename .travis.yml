@@ -18,6 +18,9 @@ cache:
 after_failure:
   # TODO #
   - echo $TRAVIS_TEST_RESULT
+  
+after_success:
+  - ./gradlew jacocoTestReport coveralls
 
 deploy:
   - provider: releases
