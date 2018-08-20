@@ -1,8 +1,8 @@
 # travis-ci-prototype
 
-Travis
-Github Releases
-Maven-publish
-Bintray
-JaCoCo
-Coveralls
+- Travis
+- Github Releases
+- Maven-publish
+- Bintray
+- JaCoCo
+- Coveralls
