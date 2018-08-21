@@ -18,7 +18,7 @@ public final class FooBar {
 	
 	
 	public int multiply() {
-		return this.a * this.b;
+		return this.a * this.c;
 	}
 
 
